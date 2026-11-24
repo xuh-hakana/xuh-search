@@ -1,0 +1,56 @@
+[
+  {
+    "name": "萌娘百科",
+    "domain": "zh.moegirl.org.cn",
+    "url": "https://zh.moegirl.org.cn/",
+    "search": "https://zh.moegirl.org.cn/index.php?search={q}",
+    "api": "https://zh.moegirl.org.cn/api.php?action=query&format=json&prop=extracts&exintro=1&explaintext=1&redirects=1&titles={q}",
+    "reliability": "alive",
+    "note": "2026-11 实测：api.php 返回 200 且能查到词条（初音未来/原神等有摘要）；网页有 Cloudflare，curl 首页 403 但浏览器能开。偏 ACG/游戏类词条，普通网络梗可能没有。内联查（查梗面板/虚幻侧玩梗）现在走它。"
+  },
+  {
+    "name": "梗百科",
+    "domain": "gengbaike.cn",
+    "url": "https://gengbaike.cn/",
+    "search": "https://gengbaike.cn/index.php?search-kw={q}",
+    "api": "",
+    "reliability": "alive",
+    "note": "2026-11 实测 HTTP 200，真站点（标题「梗百科-有新梗热梗的梗网站」），有搜索入口；搜索结果靠前端渲染，浏览器打开可查。"
+  },
+  {
+    "name": "墨鱼词典",
+    "domain": "moyuoo.com",
+    "url": "https://moyuoo.com/",
+    "search": "https://moyuoo.com/?s={q}",
+    "api": "https://moyuoo.com/wp-json/wp/v2/posts?search={q}&per_page=5&_fields=id,title,link,excerpt",
+    "reliability": "alive",
+    "note": "2026-11-09 实测：官方 WordPress REST 接口可用（/wp-json/ 根返回 147 条路由，posts 有真实词条）。「郑姆斯特丹」精确命中、「破防」有结果；「显眼包」该站未收录返回空数组。已填 api 接入内联查，是娱乐组第二个能出词条的源。网页 ?s= 搜索靠前端渲染，浏览器打开可查。"
+  },
+  {
+    "name": "梗图网",
+    "domain": "gengtu.net",
+    "url": "https://gengtu.net/",
+    "search": "",
+    "api": "",
+    "reliability": "alive",
+    "note": "2026-11 实测首页被 Cloudflare 挑战页挡住（curl 403），但真实站点、浏览器可正常打开，偏向梗图搜索。"
+  },
+  {
+    "name": "鲸吼",
+    "domain": "jinghooo.com",
+    "url": "https://www.jinghooo.com/",
+    "search": "",
+    "api": "",
+    "reliability": "alive",
+    "note": "2026-11 搜索发现并实测：Z 世代梗文化社区（梗百科/热榜/梗图），官网 jinghooo.com（三个 o）。首页被 Cloudflare 挑战页挡住（curl 403），但真实站点、浏览器可正常打开。"
+  },
+  {
+    "name": "梗 wiki（cnmeme）",
+    "domain": "cnmeme.wiki",
+    "url": "https://cnmeme.wiki/",
+    "search": "",
+    "api": "",
+    "reliability": "doubtful",
+    "note": "2026-11 实测：首页 HTTP 200，但 api.php、搜索页、词条页全部 404，查词/搜索功能当前不可用。已关闭它的内联查与搜索（lookup 不再白等超时）；客户端仍可打开首页。若日后恢复会自动可接。"
+  }
+]

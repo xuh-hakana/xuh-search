@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>search</string>
+	<key>CFBundleDisplayName</key>
+	<string>search</string>
+	<key>CFBundleIdentifier</key>
+	<string>local.xuhuan.search</string>
+	<key>CFBundleVersion</key>
+	<string>0.1.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleExecutable</key>
+	<string>search</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh_CN</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>12.0</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>本地只读 · 文件不出这台电脑</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>search 需要读取你登记的文件夹，才能把里面的内容做成可搜索的索引。</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>search 需要读取你登记的文件夹，才能把里面的内容做成可搜索的索引。</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>search 需要读取你登记的文件夹，才能把里面的内容做成可搜索的索引。</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>用来弹出「选择文件夹」对话框，以及把文件交给访达显示。</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+</dict>
+</plist>
